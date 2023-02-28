@@ -1,109 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
-  <link rel="stylesheet" href="style/style.css">
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-</head>
-<body>
-
-  <main>
-    <section id="top">
-      <div>
-        <h1>
-          Our Pricing
-        </h1>
-        <div class="toggle-bar">
-          <span class="gray-text">
-            Annually
-          </span>
-          <span class="toggle-button">
-  
-          </span>
-          <span class="gray-text">
-            Monthly
-          </span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <main>
+      <section id="prices">
+        <div id="top">
+          <h2>Our Pricing</h2>
+          <div class="toggle-bar">
+            <span class="gray-text"> Annually </span>
+            <span class="toggle-button" data-toggled="false">
+              <span class="ball"></span>
+            </span>
+            <span class="gray-text"> Monthly </span>
+          </div>
         </div>
-      </div>
-    </section>
-  
-    <section id="prices">
-      <div class="box">
-        <h3>
-          Basic
-        </h3>  
-        <span class="price">
-          &dollar;1<span class="monthly">9</span>9.99
-        </span>
-        <ul>
-          <li>
-            500 GB Storage
-          </li>
-          <li>
-            2 Users Allowed
-          </li>
-          <li>
-            Send up to 3 GB
-          </li>
-        </ul>
-        <button type="button" class="btn primary-btn">
-          Learn More
-        </button>
-      </div>
 
-      <div class="box active">
-        <h3>
-          Professional
-        </h3>
-        <span class="price">
-          &dollar;24<span class="monthly">9</span>.99
-        </span>
-        <ul>
-          <li>
-            1 TB Storage
-          </li>
-          <li>
-            5 Users Allowed
-          </li>
-          <li>
-            Send up to 10 GB
-          </li>
-        </ul>
-        <button type="button" class="btn primary-btn">
-          Learn More
-        </button>
-      </div>
-      
-      <div class="box active">
-        <h3>
-          Master
-        </h3>
-        <span class="price">
-          &dollar;39<span class="monthly">9</span>.99
-        </span>
-        <ul>
-          <li>
-            2 TB Storage
-          </li>
-          <li>
-            10 Users Allowed
-          </li>
-          <li>
-            Send up to 20 GB
-          </li>
-        </ul>
-        <button type="button" class="btn primary-btn">
-          Learn More
-        </button>
-      </div>
-    </section>
-  </main>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div id="boxes">
+          <div class="box">
+            <h3>Basic</h3>
+            <span class="price">
+              &dollar;1<span class="monthly">9</span>9.99
+            </span>
+            <ul>
+              <li>500 GB Storage</li>
+              <li>2 Users Allowed</li>
+              <li>Send up to 3 GB</li>
+            </ul>
+            <button type="button" class="btn primary-btn">Learn More</button>
+          </div>
+
+          <div class="box active">
+            <h3>Professional</h3>
+            <span class="price">
+              &dollar;24<span class="monthly">9</span>.99
+            </span>
+            <ul>
+              <li>1 TB Storage</li>
+              <li>5 Users Allowed</li>
+              <li>Send up to 10 GB</li>
+            </ul>
+            <button type="button" class="btn primary-btn">Learn More</button>
+          </div>
+
+          <div class="box">
+            <h3>Master</h3>
+            <span class="price">
+              &dollar;39<span class="monthly">9</span>.99
+            </span>
+            <ul>
+              <li>2 TB Storage</li>
+              <li>10 Users Allowed</li>
+              <li>Send up to 20 GB</li>
+            </ul>
+            <button type="button" class="btn primary-btn">Learn More</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script>
+      const toggleButton = document.querySelector(".toggle-button");
+
+      let toggle = (e) => {
+        e.stopPropagation();
+        let toggled = toggleButton.getAttribute("data-toggled") == "true";
+
+        toggleButton.setAttribute("data-toggled", toggled ? "false" : "true");
+      };
+
+      toggleButton.querySelector(".ball").addEventListener("click", toggle);
+      toggleButton.addEventListener("click", toggle);
+    </script>
+  </body>
 </html>

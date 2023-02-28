@@ -7,4 +7,126 @@
 
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  background: url("../images/bg-bottom.svg") bottom/cover no-repeat, url("../images/bg-top.svg") top/cover no-repeat, hsl(240, 78%, 98%);
+  color: hsl(232, 13%, 33%);
+  padding: 3em 1.5em;
+}
+
+ul {
+  list-style: none;
+}
+
+.gray-text {
+  color: hsl(234, 14%, 74%);
+}
+
+.flex {
+  display: flex;
+}
+
+.btn {
+  outline: 0;
+  border: 0;
+  padding: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  border-radius: 0.3em;
+  font-weight: 700;
+}
+
+.primary-btn {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+}
+
+.toggle-bar {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.toggle-button {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  width: 70px;
+  height: 40px;
+  position: relative;
+  border-radius: 30px;
+}
+.toggle-button .ball {
+  display: block;
+  height: 80%;
+  aspect-ratio: 1;
+  margin: 0 0.3em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background: white;
+  transition: left 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-button[data-toggled=true] .ball {
+  left: calc(100% - 0.6em);
+  transform: translate(-100%, -50%);
+}
+
+.box {
+  padding: 2em;
+  background: white;
+  text-align: center;
+  border-radius: 0.7em;
+}
+.box h3 {
+  margin-bottom: 1em;
+}
+.box > * + * {
+  margin-top: 2.5em;
+}
+.box ul li {
+  padding: 1em 0;
+}
+.box ul li {
+  border-top: 1px solid hsl(234, 14%, 74%);
+}
+.box ul li:last-child {
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+.box .btn {
+  display: block;
+  width: 100%;
+}
+
+.box + .box {
+  margin-top: 2em;
+}
+
+.box.active {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+}
+.box.active .btn {
+  background: white;
+  color: hsl(232, 13%, 33%);
+}
+
+.price {
+  font-size: 3.5em;
+}
+
+#top {
+  text-align: center;
+  width: -moz-max-content;
+  width: max-content;
+  margin-inline: auto;
+  -webkit-margin-after: 4em;
+          margin-block-end: 4em;
+}
+#top h2 {
+  font-size: 2em;
+}
+#top > * + * {
+  margin-top: 2.5em;
 }/*# sourceMappingURL=style.css.map */
