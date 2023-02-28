@@ -7,9 +7,18 @@
 
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  background: url("../images/bg-bottom.svg") bottom/cover no-repeat, url("../images/bg-top.svg") top/cover no-repeat, hsl(240, 78%, 98%);
+  background: url("../images/bg-bottom.svg") bottom left no-repeat, url("../images/bg-top.svg") top right no-repeat, hsl(240, 78%, 98%);
   color: hsl(232, 13%, 33%);
   padding: 3em 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+}
+
+.attribution {
+  text-align: center;
 }
 
 ul {
@@ -18,6 +27,10 @@ ul {
 
 .gray-text {
   color: hsl(234, 14%, 74%);
+}
+
+.monthly {
+  display: none;
 }
 
 .flex {
@@ -33,6 +46,10 @@ ul {
   font-size: 1em;
   border-radius: 0.3em;
   font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition-property: color, border-color;
+  transition-duration: 0.4s;
 }
 
 .primary-btn {
@@ -40,11 +57,26 @@ ul {
   color: white;
 }
 
+.primary-btn:hover {
+  color: hsl(232, 13%, 33%);
+  background: white;
+  border-color: hsl(232, 13%, 33%);
+}
+
+.secondary-btn {
+  background: white;
+  color: hsl(232, 13%, 33%);
+}
+
+.secondary-btn:hover {
+  color: white;
+  border-color: white;
+  background: hsl(237, 63%, 64%);
+}
+
 /* ######toggle####### */
 #ckPricing {
-  height: 0;
-  width: 0;
-  visibility: hidden;
+  display: none;
 }
 
 .toggle-bar {
@@ -60,6 +92,11 @@ ul {
   position: relative;
   background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border-radius: 40px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  filter: brightness(1.3);
 }
 
 .toggle-button::before {
@@ -104,26 +141,17 @@ ul {
 .box ul li:last-child {
   border-bottom: 1px solid hsl(234, 14%, 74%);
 }
+.box .price {
+  font-size: 3.5em;
+}
 .box .btn {
   display: block;
   width: 100%;
 }
 
-.box + .box {
-  margin-top: 2em;
-}
-
 .box.active {
   background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: white;
-}
-.box.active .btn {
-  background: white;
-  color: hsl(232, 13%, 33%);
-}
-
-.price {
-  font-size: 3.5em;
 }
 
 /* #############price section############ */
@@ -140,4 +168,23 @@ ul {
 }
 #top > * + * {
   margin-top: 2.5em;
+}
+
+#boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+@media (min-width: 40em) {
+  #boxes {
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+  }
+  #boxes .box.active {
+    padding: 3em;
+    margin-inline: -10px;
+    z-index: 999;
+  }
 }/*# sourceMappingURL=style.css.map */

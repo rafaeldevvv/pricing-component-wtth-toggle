@@ -29,7 +29,7 @@
           <article class="box">
             <h3>Basic</h3>
             <span class="price">
-              &dollar;1<span class="monthly">9</span>9.99
+              &dollar;1<span class="annually">9</span>9.99
             </span>
             <ul>
               <li>500 GB Storage</li>
@@ -42,20 +42,20 @@
           <article class="box active">
             <h3>Professional</h3>
             <span class="price">
-              &dollar;24<span class="monthly">9</span>.99
+              &dollar;24<span class="annually">9</span>.99
             </span>
             <ul>
               <li>1 TB Storage</li>
               <li>5 Users Allowed</li>
               <li>Send up to 10 GB</li>
             </ul>
-            <button type="button" class="btn primary-btn">Learn More</button>
+            <button type="button" class="btn secondary-btn">Learn More</button>
           </article>
 
           <article class="box">
             <h3>Master</h3>
             <span class="price">
-              &dollar;39<span class="monthly">9</span>.99
+              &dollar;39<span class="annually">9</span>.99
             </span>
             <ul>
               <li>2 TB Storage</li>
@@ -72,7 +72,17 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/rafaeldevvv">Rafael Maia</a>.
     </div>
+
+    <script>
+      document.querySelector("#ckPricing").onchange = e => {
+        let monthly = e.target.checked;
+
+        Array.from(document.querySelectorAll(".annually")).forEach(a => {
+          a.style.display = monthly ? "none" : "inline";
+        })
+      }
+    </script>
   </body>
 </html>
