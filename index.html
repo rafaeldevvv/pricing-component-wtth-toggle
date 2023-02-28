@@ -19,15 +19,14 @@
           <h2>Our Pricing</h2>
           <div class="toggle-bar">
             <span class="gray-text"> Annually </span>
-            <span class="toggle-button" data-toggled="false">
-              <span class="ball"></span>
-            </span>
-            <span class="gray-text"> Monthly </span>
+            <input type="checkbox" id="ckPricing">
+            <label for="ckPricing" class="toggle-button"></label>
+            <span class="gray-text"> Monthly </span>  
           </div>
         </div>
 
         <div id="boxes">
-          <div class="box">
+          <article class="box">
             <h3>Basic</h3>
             <span class="price">
               &dollar;1<span class="monthly">9</span>9.99
@@ -38,9 +37,9 @@
               <li>Send up to 3 GB</li>
             </ul>
             <button type="button" class="btn primary-btn">Learn More</button>
-          </div>
+          </article>
 
-          <div class="box active">
+          <article class="box active">
             <h3>Professional</h3>
             <span class="price">
               &dollar;24<span class="monthly">9</span>.99
@@ -51,9 +50,9 @@
               <li>Send up to 10 GB</li>
             </ul>
             <button type="button" class="btn primary-btn">Learn More</button>
-          </div>
+          </article>
 
-          <div class="box">
+          <article class="box">
             <h3>Master</h3>
             <span class="price">
               &dollar;39<span class="monthly">9</span>.99
@@ -64,7 +63,7 @@
               <li>Send up to 20 GB</li>
             </ul>
             <button type="button" class="btn primary-btn">Learn More</button>
-          </div>
+          </article>
         </div>
       </section>
     </main>
@@ -75,19 +74,5 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
-
-    <script>
-      const toggleButton = document.querySelector(".toggle-button");
-
-      let toggle = (e) => {
-        e.stopPropagation();
-        let toggled = toggleButton.getAttribute("data-toggled") == "true";
-
-        toggleButton.setAttribute("data-toggled", toggled ? "false" : "true");
-      };
-
-      toggleButton.querySelector(".ball").addEventListener("click", toggle);
-      toggleButton.addEventListener("click", toggle);
-    </script>
   </body>
 </html>
