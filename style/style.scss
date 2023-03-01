@@ -58,18 +58,15 @@ ul {
    border: 0;
 
    padding: 1em;
-
+   border-radius: .6em;
+   border: 1px solid transparent;
+   cursor: pointer;
+   
    text-align: center;
    text-transform: uppercase;
-   font-size: 1em;
-
-   border-radius: .3em;
-
    font-weight: 700;
-
-   cursor: pointer;
-
-   border: 1px solid transparent;
+   font-size: 1em;
+   letter-spacing: 2px;
 
    transition-property: color, border-color;
    transition-duration: .4s;
@@ -142,12 +139,11 @@ ul {
 
 /* ###box### */
 .box {
-   padding: 2em;
-   background: white;
    text-align: center;
-
+   background: white;
+   
+   padding: 2em;
    border-radius: .7em;
-
    box-shadow: 0 12px 17px $light-grayish-blue;
 
    h3 {
@@ -160,7 +156,7 @@ ul {
 
    ul {
       li {
-         padding: 1em 0;
+         padding: 1.2em 0;
       }
 
       li {
@@ -174,6 +170,11 @@ ul {
    .price {
       font-size: 3.5em;
    }
+   .dollar {
+      margin-right: .2em;
+      font-size: .65em;
+      vertical-align: top;
+   }
 
    .btn {
       display: block;
@@ -186,6 +187,11 @@ ul {
 }
 
 /* #############price section############ */
+#prices {
+   width: 1050px;
+   max-width: 1050px;
+}
+
 #top {
    text-align: center;
    width: max-content;
@@ -206,8 +212,13 @@ ul {
 #boxes {
    display: flex;
    flex-direction: column;
-
+   justify-content: center;
+   
    gap: 2em;
+
+   .box {
+      flex: 1 0 auto;
+   }
 }
 
 @media (min-width: 40em) {
