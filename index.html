@@ -74,15 +74,5 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://github.com/rafaeldevvv">Rafael Maia</a>.
     </footer>
-
-    <script>
-      document.querySelector("#ckPricing").onchange = e => {
-        let monthly = e.target.checked;
-
-        Array.from(document.querySelectorAll(".annually")).forEach(a => {
-          a.style.display = monthly ? "none" : "inline";
-        })
-      }
-    </script>
   </body>
 </html>

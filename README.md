@@ -88,6 +88,13 @@ I liked this way to make a toggle button.
 }
 ```
 
+This was my simple solution for the only-html-and-css version.
+```scss
+#prices:has(#ckPricing:checked) .annually {
+   display:none;
+}
+```
+
 I thought the boxes would shrink anyway with just flex-shrink of 1, but i also had to specify a min-width of 0.
 ```scss
 .box {

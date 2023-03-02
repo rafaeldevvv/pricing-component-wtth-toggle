@@ -116,6 +116,10 @@ ul {
   transform: translate(-100%, -50%);
 }
 
+#prices:has(#ckPricing:checked) .annually {
+  display: none;
+}
+
 /* ###box### */
 .box {
   text-align: center;
