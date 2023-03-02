@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [here](https://github.com/rafaeldevvv/pricing-component-wtth-toggle)
+- Live Site URL: [here](https://your-live-site-url.com)
 
 ## My process
 
@@ -114,4 +114,4 @@ I want to continue improving my skills of responsive web design and I want to us
 ## Author
 
 - Frontend Mentor - [@rafaeldevvv](https://www.frontendmentor.io/profile/rafaeldevvv)
-- Twitter - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)
+- Instagram - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)
