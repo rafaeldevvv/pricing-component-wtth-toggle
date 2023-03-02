@@ -15,15 +15,16 @@ $dark-blue: hsl(232, 13%, 33%);
 
 body {
    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-
-   background: 
-   url("../images/bg-bottom.svg") bottom left no-repeat,
-   url('../images/bg-top.svg') top right no-repeat,
-   $very-light-grayish-blue;
    font-weight: 700;
-
    color: $dark-blue;
-   
+
+   background-image: 
+   url("../images/bg-bottom.svg"),
+   url('../images/bg-top.svg');
+   background-repeat: no-repeat;
+   background-position: 0 100%, calc(100% + 195px) -40px;
+   background-color: $very-light-grayish-blue;
+
    padding: 4em 1.5em;
 }
 
@@ -138,7 +139,7 @@ ul {
    border-radius: .7em;
    box-shadow: 0 12px 17px hsla(233, 13%, 49%, .15);
    margin-inline: auto;
-   
+
    width: 100%;
    max-width: 350px;
 
@@ -212,6 +213,9 @@ main {
 }
 
 @media (min-width: 50em) {
+   body {
+      background-position: bottom left, top right;
+   }
    #boxes {
       flex-direction: row;
       align-items: center;

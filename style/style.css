@@ -7,9 +7,12 @@
 
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  background: url("../images/bg-bottom.svg") bottom left no-repeat, url("../images/bg-top.svg") top right no-repeat, hsl(240, 78%, 98%);
   font-weight: 700;
   color: hsl(232, 13%, 33%);
+  background-image: url("../images/bg-bottom.svg"), url("../images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-position: 0 100%, calc(100% + 195px) -40px;
+  background-color: hsl(240, 78%, 98%);
   padding: 4em 1.5em;
 }
 
@@ -186,6 +189,9 @@ main {
 }
 
 @media (min-width: 50em) {
+  body {
+    background-position: bottom left, top right;
+  }
   #boxes {
     flex-direction: row;
     align-items: center;
