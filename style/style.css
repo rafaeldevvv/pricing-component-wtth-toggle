@@ -144,10 +144,11 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.1em;
 }
 .box .dollar {
   font-size: 0.65em;
+  -webkit-margin-end: 0.2em;
+          margin-inline-end: 0.2em;
 }
 .box .btn {
   display: block;
