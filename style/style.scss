@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Chakra+Petch:wght@300;400;500;600&family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,700;1,700&family=Open+Sans:ital@0;1&family=Orbitron:wght@400;500;600;700;800;900&family=Play:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Press+Start+2P&family=Rajdhani:wght@500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Chakra+Petch:wght@300;400;500;600&family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&family=Open+Sans:ital@0;1&family=Orbitron:wght@400;500;600;700;800;900&family=Play:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Press+Start+2P&family=Rajdhani:wght@500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=VT323&display=swap');
 
 $gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 
@@ -20,21 +20,19 @@ body {
    url("../images/bg-bottom.svg") bottom left no-repeat,
    url('../images/bg-top.svg') top right no-repeat,
    $very-light-grayish-blue;
+   font-weight: 700;
 
    color: $dark-blue;
    
-   padding: 3em 1.5em;
-
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-
-   gap: 5em;
+   padding: 4em 1.5em;
 }
 
 .attribution {
    text-align: center;
+
+   a {
+      color: $grayish-blue;
+   }
 }
 
 ul {
@@ -45,10 +43,6 @@ ul {
    color: $light-grayish-blue;
 }
 
-.monthly {
-   display: none;
-}
-
 .flex {
    display: flex;
 }
@@ -57,15 +51,14 @@ ul {
    outline: 0;
    border: 0;
 
-   padding: 1em;
+   padding: 1.2em;
    border-radius: .6em;
    border: 1px solid transparent;
    cursor: pointer;
    
    text-align: center;
    text-transform: uppercase;
-   font-weight: 700;
-   font-size: 1em;
+   font-size: .8em;
    letter-spacing: 2px;
 
    transition-property: color, border-color;
@@ -99,15 +92,15 @@ ul {
 .toggle-bar {
    display: flex;
    align-items: center;
-   gap: 1em;
+   gap: 1.5em;
 }
 .toggle-button {
    display: block;
-   width: 80px;
-   height: 50px;
+   width: 60px;
+   height: 35px;
    position: relative;
 
-   background: $gradient;
+   background: hsl(237, 63%, 64%);
    border-radius: 40px;
 
    cursor: pointer;
@@ -118,15 +111,14 @@ ul {
 .toggle-button::before {
    content: '';
    position: absolute;
-   height: 40px;
+   height: 25px;
    aspect-ratio: 1;
+   background: white;
+   border-radius: 50%;
 
    left: 5px;
    top: 50%;
    transform: translateY(-50%);
-
-   background: white;
-   border-radius: 50%;
 
    transition-property: transform, left;
    transition-duration: .2s;
@@ -144,15 +136,15 @@ ul {
    
    padding: 2em;
    border-radius: .7em;
-   box-shadow: 0 12px 17px $light-grayish-blue;
+   box-shadow: 0 12px 17px hsla(233, 13%, 49%, .15);
+   margin-inline: auto;
+   
+   width: 100%;
+   max-width: 350px;
 
-   h3 {
-      margin-bottom: 1em;
-   }
-
-   > * + * {
-      margin-top: 2.5em;
-   }
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
 
    ul {
       li {
@@ -165,15 +157,19 @@ ul {
       li:last-child {
          border-bottom: 1px solid $light-grayish-blue;
       }
+
    }
    
    .price {
       font-size: 3.5em;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .1em;
    }
    .dollar {
-      margin-right: .2em;
       font-size: .65em;
-      vertical-align: top;
    }
 
    .btn {
@@ -187,9 +183,10 @@ ul {
 }
 
 /* #############price section############ */
-#prices {
-   width: 1050px;
-   max-width: 1050px;
+main {
+   margin-inline: auto;
+   max-width: 1000px;
+   margin-block-end: 4em;
 }
 
 #top {
@@ -197,7 +194,6 @@ ul {
    width: max-content;
 
    margin-inline: auto;
-
    margin-block-end: 4em;
 
    h2 {
@@ -212,25 +208,22 @@ ul {
 #boxes {
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   
    gap: 2em;
-
-   .box {
-      flex: 1 0 auto;
-   }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 50em) {
    #boxes {
       flex-direction: row;
+      align-items: center;
       gap: 0;
 
-      align-items: center;
-
+      .box {
+         min-width: 0;
+         flex: 1 1 auto;
+      }
+      
       .box.active {
-         padding: 3em;
-
+         padding-block: 3em;
          margin-inline: -10px;
 
          z-index: 999;
