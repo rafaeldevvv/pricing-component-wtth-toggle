@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [here](https://github.com/rafaeldevvv/pricing-component-wtth-toggle)
-- Live Site URL: [here]([https://your-live-site-url.com](https://rafaeldevvv.github.io/pricing-component-wtth-toggle/))
+- Live Site URL: [here](https://your-live-site-url.com](https://rafaeldevvv.github.io/pricing-component-wtth-toggle/)
 
 ## My process
 
